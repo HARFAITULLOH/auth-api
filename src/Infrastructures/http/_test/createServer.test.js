@@ -29,19 +29,19 @@ describe('HTTP server', () => {
     expect(response.statusCode).toEqual(404);
   });
 
-  describe('when GET /', () => {
-    it('should return 200 and hello world', async () => {
+  describe('when GET /coba', () => {
+    it('should return 200 and Ini cuma nyoba, Boss!', async () => {
       // Arrange
       const server = await createServer({});
       // Action
       const response = await server.inject({
         method: 'GET',
-        url: '/',
+        url: '/coba',
       });
       // Assert
       const responseJson = JSON.parse(response.payload);
       expect(response.statusCode).toEqual(200);
-      expect(responseJson.value).toEqual('Hello world!');
+      expect(responseJson.value).toEqual('Ini cuma nyoba, Boss!');
     });
   });
 
