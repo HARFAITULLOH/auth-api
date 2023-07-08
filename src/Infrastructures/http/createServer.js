@@ -23,9 +23,9 @@ const createServer = async (container) => {
 
   server.route({
     method: 'GET',
-    path: '/',
+    path: '/coba',
     handler: () => ({
-      value: 'Hello world!',
+      value: 'Ini cuma nyoba, Boss!',
     }),
   });
 
